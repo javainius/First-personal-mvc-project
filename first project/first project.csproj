@@ -269,6 +269,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Personal\Index.cshtml" />
     <Content Include="Views\Personal\Result.cshtml" />
+    <Content Include="Views\Personal\ViewUsers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -283,6 +284,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\First project data library\FirstProjectDataLibrary.csproj">
+      <Project>{39a1b79f-b6b8-4ec4-90df-d840e3bcaa8e}</Project>
+      <Name>FirstProjectDataLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
