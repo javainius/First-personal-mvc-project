@@ -5,5 +5,5 @@
     [LastName] NVARCHAR(50) NOT NULL, 
     [Email] NVARCHAR(50) NOT NULL, 
     [Description] NVARCHAR(50) NOT NULL, 
-    [Age] INT NOT NULL
+    [Age] INT NOT NULL 
 )

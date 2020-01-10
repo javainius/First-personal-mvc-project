@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using FirstProjectDataLibrary;
-using FirstProjectDataLibrary.BuisnessLogic;
+using FirstProjectDataLibrary.BusinessLogic;
 
 namespace first_project.Controllers
 {
@@ -20,22 +20,17 @@ namespace first_project.Controllers
 
         public ActionResult ViewUsers()
         {
-            ViewBag.Message = "Users List";
-
             var data = UserProcessor.LoadUsers();
-            List<User> users = new List<User>();
 
-            foreach (var row in data)
+            var users = data.Select(row => new User
             {
-                users.Add(new User
-                {
-                    Name = row.Name,
-                    LastName = row.LastName,
-                    Email = row.Email,
-                    Description = row.Description,
-                    Age = row.Age
-                });
-            }
+                Name = row.Name,
+                LastName = row.LastName,
+                Email = row.Email,
+                Description = row.Description,
+                Age = row.Age,
+                Id = row.Id
+            }).ToList();
 
             return View(users);
         }
@@ -49,12 +44,20 @@ namespace first_project.Controllers
                 return View("Index", model);
             }
 
-             int recoredsCreated = UserProcessor.CreateUser(model.Name,
+             UserProcessor.CreateUser(model.Name,
                     model.LastName,
                     model.Email,
                     model.Description,
-                    model.Age);
+                    model.Age
+                    );
             return View(model);
+        }
+
+        public ActionResult Delete(int id)
+        {
+            UserProcessor.DeleteUser(id);
+
+            return RedirectToAction("ViewUsers");
         }
     }
 }

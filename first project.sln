@@ -5,12 +5,6 @@ VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "first project", "first project\first project.csproj", "{84E39E88-ED2A-4407-8949-097C3C493E1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessTutorial", "DataAccessTutorial\DataAccessTutorial.csproj", "{3C08001A-196C-4B41-97A6-91CE2E1211C4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLibrary", "DataLibrary\DataLibrary.csproj", "{F4577AD5-7511-41D7-97F8-30ECD02D0DDD}"
-EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "MVCTutorialDB", "MVCTutorialDB\MVCTutorialDB.sqlproj", "{1BA1BA3A-1983-48E9-B795-CCA414DB7BB7}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstProjectDataLibrary", "First project data library\FirstProjectDataLibrary.csproj", "{39A1B79F-B6B8-4EC4-90DF-D840E3BCAA8E}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DatabaseForFirstProject", "Database for first project\DatabaseForFirstProject.sqlproj", "{734E4DCA-9797-471D-93CD-68A7A6701F21}"
@@ -25,20 +19,6 @@ Global
 		{84E39E88-ED2A-4407-8949-097C3C493E1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84E39E88-ED2A-4407-8949-097C3C493E1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84E39E88-ED2A-4407-8949-097C3C493E1D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3C08001A-196C-4B41-97A6-91CE2E1211C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3C08001A-196C-4B41-97A6-91CE2E1211C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3C08001A-196C-4B41-97A6-91CE2E1211C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3C08001A-196C-4B41-97A6-91CE2E1211C4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F4577AD5-7511-41D7-97F8-30ECD02D0DDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F4577AD5-7511-41D7-97F8-30ECD02D0DDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F4577AD5-7511-41D7-97F8-30ECD02D0DDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F4577AD5-7511-41D7-97F8-30ECD02D0DDD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1BA1BA3A-1983-48E9-B795-CCA414DB7BB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1BA1BA3A-1983-48E9-B795-CCA414DB7BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1BA1BA3A-1983-48E9-B795-CCA414DB7BB7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{1BA1BA3A-1983-48E9-B795-CCA414DB7BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1BA1BA3A-1983-48E9-B795-CCA414DB7BB7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1BA1BA3A-1983-48E9-B795-CCA414DB7BB7}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{39A1B79F-B6B8-4EC4-90DF-D840E3BCAA8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{39A1B79F-B6B8-4EC4-90DF-D840E3BCAA8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39A1B79F-B6B8-4EC4-90DF-D840E3BCAA8E}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -59,11 +59,18 @@
     <Folder Include="dbo" />
     <Folder Include="dbo\Tables" />
     <Folder Include="Publish Profiles\" />
+    <Folder Include="Procedures" />
+    <Folder Include="Functions" />
+    <Folder Include="Views" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\UserData.sql" />
+    <Build Include="Functions\getUsersData.sql" />
+    <Build Include="Procedures\DeleteUser.sql" />
+    <Build Include="Procedures\CreateUser.sql" />
+    <Build Include="Views\allUserData.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Publish Profiles\Database for first project.publish.xml" />
+    <None Include="Publish Profiles\DatabaseForFirstProject.publish.xml" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,8 @@
+﻿
+CREATE PROCEDURE DeleteUser(
+	@Id INT
+) 
+AS BEGIN
+	DELETE FROM dbo.UserData 
+	WHERE Id = @Id
+END

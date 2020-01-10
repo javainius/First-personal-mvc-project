@@ -7,6 +7,7 @@ using Dapper;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using FirstProjectDataLibrary.Models;
 
 namespace FirstProjectDataLibrary.DataAccess
 {
@@ -19,12 +20,39 @@ namespace FirstProjectDataLibrary.DataAccess
                 return cnn.Query<T>(sql).ToList();
             }
         }
-        public static int SaveData<T>(string sql, T data)
+        public static void SaveUser(UserModel data)
         {
-            using (IDbConnection cnn = new SqlConnection(GetConnectionString()))
+            var conn = new SqlConnection(GetConnectionString());
+            conn.Open();
+            var cmd = new SqlCommand("CreateUser", conn)
             {
-                return cnn.Execute(sql, data);
-            }
+                CommandType = CommandType.StoredProcedure
+            };
+
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add(new SqlParameter("@Name", data.Name));
+            cmd.Parameters.Add(new SqlParameter("@LastName", data.LastName));
+            cmd.Parameters.Add(new SqlParameter("@Email", data.Email));
+            cmd.Parameters.Add(new SqlParameter("@Description", data.Description));
+            cmd.Parameters.Add(new SqlParameter("@Age", data.Age));
+           
+            cmd.ExecuteNonQuery();
+        }
+        public static void DeleteData(int Id)
+        {
+            var conn = new SqlConnection(GetConnectionString());
+            conn.Open();
+            var cmd = new SqlCommand("DeleteUser", conn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.Add(new SqlParameter("@Id", Id));
+            
+            cmd.ExecuteNonQuery();
         }
         
         public static string GetConnectionString(string connectionName = "DatabaseForFirstProject")

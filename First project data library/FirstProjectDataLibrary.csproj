@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BuisnessLogic\UserProcessor.cs" />
+    <Compile Include="BusinessLogic\UserProcessor.cs" />
     <Compile Include="DataAccess\SqlDataAccesss.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
