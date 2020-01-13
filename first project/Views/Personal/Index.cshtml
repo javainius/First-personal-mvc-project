@@ -1,4 +1,4 @@
-﻿@model first_project.Models.User
+﻿@model first_project.Models.UserCreationModel
 
 @{
     ViewBag.Title = "Index";
@@ -30,6 +30,17 @@
         @Html.LabelFor(model => model.Age)
         @Html.TextBoxFor(model => model.Age, new { @class = "form-control" })
         @Html.ValidationMessageFor(model => model.Age, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group" style="margin-left: 3px;">
+        @for (int i = 0; i < Model.SexTypes.Count; i++)
+        {
+            @Html.HiddenFor(x => x.SexTypes[i].Id)
+            @Html.HiddenFor(x => x.SexTypes[i].SexType)
+        }
+        @Html.LabelFor(x => Model.SexId, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.DropDownListFor(x => Model.SexId, new SelectList(Model.SexTypes, "Id", "SexType"), htmlAttributes: new { @class = "form-control", id = "Id" })
+        @Html.ValidationMessageFor(x => x.SexId, "", new { @class = "text-danger" })
     </div>
     <button class="btn btn-dark" type="submit">Submit</button>
 }

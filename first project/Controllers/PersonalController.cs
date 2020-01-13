@@ -14,14 +14,16 @@ namespace first_project.Controllers
         // GET: Personal
         public ActionResult Index()
         {
-            var model = new User();
+            var model = new UserCreationModel();
+            model.SexTypes = UserProcessor.LoadSexTypes();
+
             return View(model);
         }
 
         public ActionResult ViewUsers()
         {
             var data = UserProcessor.LoadUsers();
-
+            var sexTypes = UserProcessor.LoadSexTypes();
             var users = data.Select(row => new User
             {
                 Name = row.Name,
@@ -29,15 +31,17 @@ namespace first_project.Controllers
                 Email = row.Email,
                 Description = row.Description,
                 Age = row.Age,
-                Id = row.Id
+                Id = row.Id,
+                SexId = row.SexId,
+                SexType = sexTypes.FirstOrDefault(x => x.Id == row.SexId).SexType
             }).ToList();
 
             return View(users);
         }
 
         [HttpPost]
-        //[ValidateAntiForgeryToken]
-        public ActionResult Result(User model)
+        
+        public ActionResult Result(UserCreationModel model)
         {
             if (!ModelState.IsValid)
             {
@@ -48,7 +52,8 @@ namespace first_project.Controllers
                     model.LastName,
                     model.Email,
                     model.Description,
-                    model.Age
+                    model.Age,
+                    model.SexId
                     );
             return View(model);
         }

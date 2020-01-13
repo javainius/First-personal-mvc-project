@@ -1,0 +1,6 @@
+﻿
+CREATE FUNCTION getSexTypes()
+RETURNS TABLE AS RETURN
+	SELECT 
+		*
+	FROM dbo.Sex

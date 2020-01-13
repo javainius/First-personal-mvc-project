@@ -36,7 +36,9 @@ namespace FirstProjectDataLibrary.DataAccess
             cmd.Parameters.Add(new SqlParameter("@Email", data.Email));
             cmd.Parameters.Add(new SqlParameter("@Description", data.Description));
             cmd.Parameters.Add(new SqlParameter("@Age", data.Age));
-           
+            cmd.Parameters.Add(new SqlParameter("@SexId", data.SexId));
+
+
             cmd.ExecuteNonQuery();
         }
         public static void DeleteData(int Id)

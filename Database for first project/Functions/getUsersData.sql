@@ -2,10 +2,11 @@
 CREATE FUNCTION getUsersData()
 RETURNS TABLE AS RETURN
 	SELECT 
-		Id,
-		Name,
-		LastName,
-		Email,
-		Description,
-		Age
-	FROM dbo.allUserData
+		ud.Id,
+		ud.Name,
+		ud.LastName,
+		ud.Email,
+		ud.SexId,
+		ud.SexType,
+		ud.Description
+	FROM dbo.allUsersData ud

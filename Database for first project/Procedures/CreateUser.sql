@@ -4,7 +4,8 @@ CREATE PROCEDURE CreateUser(
 	@LastName NVARCHAR(50), 
 	@Email NVARCHAR(50), 
 	@Description NVARCHAR(50), 
-	@Age INT
+	@Age INT,
+	@SexId INT 
 ) 
 AS BEGIN
 	INSERT INTO dbo.UserData (
@@ -12,13 +13,15 @@ AS BEGIN
 		LastName, 
 		Email, 
 		Description, 
-		Age
+		Age,
+		SexId
 	)
     VALUES (
 		@Name, 
 		@LastName, 
 		@Email, 
 		@Description, 
-		@Age
+		@Age,
+		@SexId
 	);
 END

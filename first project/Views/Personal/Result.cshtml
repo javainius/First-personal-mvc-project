@@ -1,4 +1,4 @@
-﻿@model first_project.Models.User
+﻿@model first_project.Models.UserCreationModel
 
 @{
     ViewBag.Title = "Result";
@@ -13,4 +13,6 @@
 <h2>@Model.Age</h2>
 
 <h2>@Model.Description</h2>
+
+<h2>@Model.SexType(Model.SexId)</h2>
 

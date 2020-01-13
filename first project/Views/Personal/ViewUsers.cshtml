@@ -3,12 +3,16 @@
 @{
     ViewBag.Title = "ViewUsers";
 }
-
+<script type="text/javascript" src="path/to/jquery.js"></script>
+<script type="text/javascript" src="path/to/bootstrap-tooltip.js"></script>
+<script type="text/javascript" src="path/to/bootstrap-confirmation.js"></script>
 <h2>ViewUsers</h2>
 
 <p>
     @Html.ActionLink("Create New", "Index")
 </p>
+
+<br />
 <table class="table">
     <tr>
         <th>
@@ -26,30 +30,40 @@
         <th>
             @Html.DisplayNameFor(model => model.Age)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SexType)
+        </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Age)
-        </td>
-        <td>
-            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SexType)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { type = "button", @class = "btn btn-primary" })
+            </td>
+        </tr>
+    }
+
 
 </table>
+
+
