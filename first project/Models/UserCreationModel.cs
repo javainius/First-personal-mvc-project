@@ -31,6 +31,7 @@ namespace first_project.Models
         [Required(ErrorMessage = "* A Field is required.")]
         [Range(1, 120)]
         public int Age { get; set; }
+        [Display(Name = "Sex")]
         public int SexId { get; set; }
         public int Id { get; set; }
         [Display(Name = "Sex")]

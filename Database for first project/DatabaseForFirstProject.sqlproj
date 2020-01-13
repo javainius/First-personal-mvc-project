@@ -65,10 +65,12 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\UserData.sql" />
-    <Build Include="Functions\getUsersData.sql" />
-    <Build Include="Procedures\DeleteUser.sql" />
+    <Build Include="dbo\Tables\Sex.sql" />
+    <Build Include="Views\allUsersData.sql" />
     <Build Include="Procedures\CreateUser.sql" />
-    <Build Include="Views\allUserData.sql" />
+    <Build Include="Procedures\DeleteUser.sql" />
+    <Build Include="Functions\getSexTypes.sql" />
+    <Build Include="Functions\getUsersData.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Publish Profiles\DatabaseForFirstProject.publish.xml" />
